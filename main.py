@@ -21,13 +21,9 @@ def main():
 
     ## preprocessing
     zoom(args.input_img, args.zoom_parameter, args.show_image)
-    #new_img = glob.glob("./input/zoom_*")
+
     ## tesseract
     img_to_str("./input/zoom_test_01.jpg")
-
-
-    return
-
 
 if __name__ == "__main__":
     main()
