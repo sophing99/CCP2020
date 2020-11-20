@@ -4,6 +4,7 @@ import glob
 import argparse
 from tesseract.tesseract import *
 from preprocess.zoom import *
+from preprocess.threshold import *
 
 parser = argparse.ArgumentParser(description="Implementation of ocr")
 
@@ -21,7 +22,7 @@ def main():
 
     ## preprocessing
     zoom(args.input_img, args.zoom_parameter, args.show_image)
-
+    threshold(args.input_img, "gaussian")
     ## tesseract
     img_to_str("./input/zoom_test_01.jpg")
 
