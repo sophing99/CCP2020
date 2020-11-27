@@ -7,6 +7,7 @@
 
 from PIL import Image
 import cv2
+import numpy as np
 
 def rgb_to_gray(img_path):
     img = cv2.imread(img_path, cv2.IMREAD_COLOR)
@@ -25,7 +26,7 @@ def threshold(img_path, s):
     else:
         print("Not implemented...")
 
-    img_th = Image.fromarray(img_th)
+    img_th = Image.fromarray(img_th[1])
     img_th.save("./input/threshold_" + img_path.split('/')[-1])
 
     return img_th

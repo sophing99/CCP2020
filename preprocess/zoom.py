@@ -1,5 +1,4 @@
 from PIL import Image
-import os
 
 def zoom(img_path, s, show):
     img = Image.open(img_path)
