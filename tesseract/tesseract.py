@@ -8,3 +8,4 @@ def img_to_str(img):
 
     with open("./output/ocr.txt", "w") as f:
         f.write(txt)
+        f.close()
